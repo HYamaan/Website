@@ -1,0 +1,96 @@
+#home {
+  //home section A
+  &__a {
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    i {
+      padding-bottom: 0.5rem;
+    }
+    .fa {
+      &-js-square {
+        color: rgb(212, 212, 27);
+      }
+      &-html5 {
+        color: rgb(18, 125, 224);
+      }
+      &-python {
+        color: rgb(10, 90, 143);
+      }
+      &-java {
+        color: rgb(194, 106, 34);
+      }
+    }
+  }
+
+  /* Home section b */
+
+  &__b {
+    .profile {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      li {
+        &.title {
+          font-size: 1.5rem;
+          margin-top: 2rem;
+        }
+        &.number {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+      div {
+        padding: 3rem 0;
+        &:nth-child(odd) {
+          background-color: $light-color;
+        }
+        &:nth-child(even) {
+          background-color: $medium-color;
+        }
+      }
+    }
+  }
+
+  /* Home Section c */
+
+  &__c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+
+      &__step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 25px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        line-height: 15px;
+        padding: 1rem;
+        transition: all 0.8s;
+      }
+      &__icon {
+        position: relative;
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        background-color: $dark-color;
+        color: #fff;
+        padding: 2rem;
+        text-align: center;
+
+        &:hover {
+          background: $primary-color;
+          .process__step {
+            background: $dark-color;
+          }
+        }
+      }
+    }
+  }
+}
